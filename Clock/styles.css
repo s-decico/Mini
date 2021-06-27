@@ -1,0 +1,126 @@
+* {
+  box-sizing: border-box;
+  font-family: Gotham Rounded, sans-serif;
+}
+
+body {
+  background: linear-gradient(to right, rgb(30, 221, 148), rgb(0, 234, 255));
+  overflow: hidden;
+}
+
+.clock {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 35rem;
+  width: 35rem;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 0.5rem solid rgb(255, 255, 255);
+}
+.centercircle {
+  height: 1.5rem;
+  width: 1.5rem;
+  background-color: white;
+  border-radius: 50%;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.number {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transform: rotate(var(--rotvar));
+  -webkit-transform: rotate(var(--rotvar));
+  -moz-transform: rotate(var(--rotvar));
+  -ms-transform: rotate(var(--rotvar));
+  -o-transform: rotate(var(--rotvar));
+  color: white;
+  font-size: 1.2rem;
+
+  padding-top: 0.4rem;
+}
+
+.number1 {
+  --rotvar: 30deg;
+}
+.number2 {
+  --rotvar: 60deg;
+}
+.number3 {
+  --rotvar: 90deg;
+}
+.number4 {
+  --rotvar: 120deg;
+}
+.number5 {
+  --rotvar: 150deg;
+}
+.number6 {
+  --rotvar: 180deg;
+}
+.number7 {
+  --rotvar: 210deg;
+}
+.number8 {
+  --rotvar: 240deg;
+}
+.number9 {
+  --rotvar: 270deg;
+}
+.number10 {
+  --rotvar: 300deg;
+}
+.number11 {
+  --rotvar: 330deg;
+}
+
+.clock .hand {
+  left: 50%;
+  bottom: 50%;
+  position: absolute;
+  transform-origin: bottom;
+  transform: translateX(-50%);
+}
+.clock .hourHand {
+  --rotation: 0;
+  height: 30%;
+  background-color: white;
+  width: 0.5rem;
+  border-radius: 1rem;
+  transform: rotate(calc(var(--rotation) * 1deg));
+  -webkit-transform: rotate(calc(var(--rotation) * 1deg));
+  -moz-transform: rotate(calc(var(--rotation) * 1deg));
+  -ms-transform: rotate(calc(var(--rotation) * 1deg));
+  -o-transform: rotate(calc(var(--rotation) * 1deg));
+}
+
+.clock .minuteHand {
+  --rotation: 0;
+  height: 42%;
+  background-color: rgb(77, 221, 41);
+  width: 0.2rem;
+  transform: rotate(calc(var(--rotation) * 1deg));
+}
+
+.clock .secondHand {
+  --rotation: 0;
+  height: 46%;
+  background-color: rgb(228, 48, 48);
+  width: 0.1rem;
+  transform: rotate(calc(var(--rotation) * 1deg));
+}
